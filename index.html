@@ -19,8 +19,113 @@
             },
         };
     </script>
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+    </style>
 </head>
 
-<body></body>
+<body class="p-3">
+    <div class="container lg:w-3/4 mx-auto p-5 rounded border border-indigo-500 m-5">
+        <div class="flex justify-between md:flex-row flex-col items-center">
+            <!-- left side for image -->
+            <div class="p-4 flex items-center justify-center w-1/2">
+                <img src="./images/money.webp" alt="money" class="max-w-full" />
+            </div>
+            <!-- main calculation div -->
+            <div class="p-2">
+                <h1 class="text-4xl font-extrabold text-indigo-600">
+                    Enter Your Monthly Income
+                </h1>
+                <!-- main input feilds part start -->
+                <div class="input-container p-2 mt-10">
+                    <!-- top input of income -->
+                    <span class="mx-2 font-bold">Income:</span
+            ><input
+              type="number"
+              min="0"
+              name=""
+              id="income"
+              placeholder="Monthly Income"
+              class="bg-gray-300 rounded p-3 text-gray-600 font-bold"
+              required
+            />
+            <!-- bottom e input feilds of expanses -->
+            <h2 class="text-3xl text-red-400 font-bold my-5">Expanses</h2>
+            <!-- food -->
+            <span class="mx-2 font-bold">Food:</span
+            ><input
+              type="number"
+              min="0"
+              name=""
+              id="food"
+              class="bg-gray-300 rounded p-3 text-gray-600 font-bold m-3 ml-10"
+              required
+            />
+            <br />
+            <!-- rent -->
+            <span class="mx-2 font-bold">Rent:</span
+            ><input
+              type="number"
+              min="0"
+              name=""
+              id="rent"
+              class="bg-gray-300 rounded p-3 text-gray-600 font-bold m-3 ml-10"
+              required
+            />
+            <br />
+            <!-- clothes -->
+            <span class="mx-2 font-bold">Clothes:</span
+            ><input
+              type="number"
+              min="0"
+              name=""
+              id="clothes"
+              class="bg-gray-300 rounded p-3 text-gray-600 font-bold m-3 sm:ml-4 ml-4"
+              required
+            />
+            <br />
+            <div>
+              <button
+                id="calculateBtn"
+                class="px-6 py-3 rounded bg-indigo-500 font-bold text-white block mx-auto"
+              >
+                Calculate
+              </button>
+            </div>
+            <div class="resut mt-6">
+              <h1 class="font-bold text-gray-700 text-2xl">
+                Total Expanses: <span id="expenses"></span>
+                    </h1>
+                    <h1 class="font-bold text-gray-700 text-2xl mt-4">
+                        Balance: <span id="balance"></span>
+                    </h1>
+                </div>
+            </div>
+            <!-- savings -->
+            <div class="mt-4">
+                <p class="mb-8">
+                    Enter The Persentage of you want save from the remaing balance
+                </p>
+                <input id="savePercentage" type="number" class="bg-gray-300 rounded p-3 text-gray-600 font-bold" />
+                <span class="mx-3 font-bold text-2xl">%</span>
+                <button id="calculateSavingAmount" disabled class="bg-green-300 rounded px-9 py-3 text-gray-700 ml-4 opacity-50">
+              Save
+            </button>
+
+                <h1 class="font-bold text-gray-700 text-2xl mt-5">
+                    Saving Amount: <span id="saved"></span>
+                </h1>
+                <h1 class="font-bold text-gray-700 text-2xl mt-4">
+                    Remaing Balance: <span id="remain"></span>
+                </h1>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+</body>
 
 </html>
